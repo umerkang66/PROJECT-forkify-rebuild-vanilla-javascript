@@ -57,7 +57,7 @@ export default class View {
         curEl.textContent = newEl.textContent;
       }
 
-      // Updates changed ATTRIBUES
+      // Updates changed ATTRIBUTES
       if (!newEl.isEqualNode(curEl))
         Array.from(newEl.attributes).forEach(attr =>
           curEl.setAttribute(attr.name, attr.value)
@@ -77,12 +77,12 @@ export default class View {
    */
   renderSpinner() {
     const markup = `
-    <div class="spinner">
+      <div class="spinner">
         <svg>
-            <use href="${icons}#icon-loader"></use>
+          <use href="${icons}#icon-loader"></use>
         </svg>
-    </div>
-        `;
+      </div>
+    `;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
@@ -92,14 +92,14 @@ export default class View {
    */
   renderError(message = this._errorMessage) {
     const markup = `
-      <div class="error">
-        <div>
+        <div class="error">
+          <div>
             <svg>
-                <use href="${icons}#icon-alert-triangle"></use>
+              <use href="${icons}#icon-alert-triangle"></use>
             </svg>
+          </div>
+          <p>${message}</p>
         </div>
-        <p>${message}</p>
-      </div>
       `;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
