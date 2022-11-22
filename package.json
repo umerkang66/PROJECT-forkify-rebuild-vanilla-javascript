@@ -1,7 +1,7 @@
 {
   "name": "forkify-rebuild-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Forkify Vanilla Javascript Project",
   "default": "index.js",
   "scripts": {
     "start": "parcel index.html",
@@ -15,7 +15,8 @@
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1",
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
     "sass": "^1.32.8"
   }
 }
